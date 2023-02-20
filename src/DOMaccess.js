@@ -1,6 +1,11 @@
 const DOM = {
+  container: document.querySelector(".container"),
   getContainer() {
-    return document.querySelector(".container");
+    return this.container;
+  },
+
+  getMain() {
+    return document.querySelector(".main");
   },
 };
 

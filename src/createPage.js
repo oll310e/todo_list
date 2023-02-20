@@ -7,7 +7,7 @@ export function createPageLayout() {
   header.classList.add("header");
   const headerTitle = document.createElement("h1");
   headerTitle.classList.add("headerTitle");
-  headerTitle.innerText = "Title";
+  headerTitle.innerHTML = "<i class='fa-solid fa-star'></i> Todo List";
   header.appendChild(headerTitle);
 
   const menu = createMenu();
@@ -18,6 +18,7 @@ export function createPageLayout() {
   const footer = document.createElement("div");
   footer.classList.add("footer");
   const footerTitle = document.createElement("h3");
+  footerTitle.classList.add("footerTitle");
   footerTitle.innerText = "Hello Footers";
   footer.appendChild(footerTitle);
 
@@ -35,17 +36,19 @@ function createMenu() {
 
   const menuSelectionInbox = document.createElement("li");
   menuSelectionInbox.classList.add("menuSelectionItem");
-  menuSelectionInbox.innerHTML = "Inbox";
+  menuSelectionInbox.innerHTML = "<i class='fa-brands fa-wordpress'></i> Inbox";
   menu.appendChild(menuSelectionInbox);
 
   const menuSelectionToday = document.createElement("li");
   menuSelectionToday.classList.add("menuSelectionItem");
-  menuSelectionToday.innerHTML = "Today";
+  menuSelectionToday.innerHTML =
+    "<i class='fa-solid fa-camera-retro'></i> Today";
   menu.appendChild(menuSelectionToday);
 
   const menuSelectionThisWeek = document.createElement("li");
   menuSelectionThisWeek.classList.add("menuSelectionItem");
-  menuSelectionThisWeek.innerHTML = "This Week";
+  menuSelectionThisWeek.innerHTML =
+    "<i class='fa-solid fa-truck-fast'></i> This Week";
   menu.appendChild(menuSelectionThisWeek);
 
   return menu;

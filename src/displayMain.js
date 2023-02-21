@@ -12,15 +12,26 @@ export function defaultSetup() {
   const mainContent = document.createElement("ul");
   mainContent.classList.add("mainContent");
 
-  const addTaskBtn = document.createElement("button");
-  addTaskBtn.classList.add("addTaskBtn");
-  addTaskBtn.addEventListener("click", (e) => addTaskForm(e));
-  addTaskBtn.innerHTML = "<i class='fa-solid fa-plus'></i> Add Task";
-
-  mainContent.appendChild(addTaskBtn);
-
   main.appendChild(mainTitle);
   main.append(mainContent);
+}
+
+export function addTaskBtn() {
+  const main = DOM.getMain();
+
+  const addTaskBtn = document.createElement("button");
+  addTaskBtn.classList.add("addTaskBtn");
+  addTaskBtn.addEventListener("click", (e) => {
+    addTaskForm(e);
+    removeTaskBtn(e);
+  });
+  addTaskBtn.innerHTML = "<i class='fa-solid fa-plus'></i> Add Task";
+
+  main.appendChild(addTaskBtn);
+}
+
+export function removeTaskBtn(e) {
+  DOM.getMain().removeChild(e.target);
 }
 
 export function displayInbox() {}

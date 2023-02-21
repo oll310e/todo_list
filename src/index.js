@@ -7,9 +7,11 @@ import {
   displayInbox,
   displayToday,
   displayThisWeek,
+  addTaskBtn,
 } from "./displayMain.js";
 
 createPageLayout();
 
 mainSetup();
 displayInbox();
+addTaskBtn();

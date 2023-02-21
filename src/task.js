@@ -62,6 +62,5 @@ function removeListItem(e) {
 }
 
 export function removeTaskForm() {
-  console.log(DOM.getTaskForm());
   DOM.getTaskForm().remove();
 }
